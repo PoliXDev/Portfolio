@@ -1,0 +1,7 @@
+@use '../abstracts/variables' as *;
+
+.home {
+  background-color: $color-black;
+  min-height: 100vh;
+}
+

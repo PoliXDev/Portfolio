@@ -1,0 +1,108 @@
+@use '../abstracts/variables' as *;
+
+// Estilos para el footer
+.footer {
+  background-color: $color-dark-gray;
+  padding: 2rem 1.5rem;
+  position: relative;
+
+  &__content {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: $color-gray;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  &__description {
+    font-size: 1rem;
+    color: $color-gray;
+    margin-bottom: 2rem;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  &__input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  &__label {
+    color: $color-gray;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  &__input {
+    padding: 1rem;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid $color-gray;
+    color: $color-gray;
+    font-size: 1rem;
+
+    &:focus {
+      outline: none;
+      border-bottom-color: $color-green;
+    }
+
+    &::placeholder {
+      color: $color-gray;
+      opacity: 0.5;
+    }
+  }
+
+  &__textarea {
+    height: 100px;
+    resize: none;
+  }
+
+  &__button {
+    align-self: flex-end;
+  }
+
+  &__separator {
+    width: 100%;
+    height: 1px;
+    background-color: $color-white;
+    opacity: 0.1;
+    margin: 2rem 0;
+  }
+
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  &__name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: $color-white;
+  }
+
+  &__social {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  &__background-oval-group {
+    position: absolute;
+    right: 50%;
+    top: 62%;
+    z-index: 1;
+ 
+  }
+}

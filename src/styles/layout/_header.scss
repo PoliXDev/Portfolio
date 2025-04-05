@@ -1,0 +1,222 @@
+@use '../abstracts/variables' as *;
+
+  // ------------------- DO NOT MODIFY  -------------------
+.header {
+  padding: 1rem 1.5rem;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+
+  &__content {
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__top {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+  }
+
+  &__social {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    justify-content: center;
+
+    a {
+      transition: opacity 0.3s ease;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  &__image-container {
+    position: relative;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    margin-top: -5rem;
+    width: 100%;
+  }
+
+
+  &__background-oval-group {
+    position: absolute;
+    right: 59%;
+    top: 35%;
+    z-index: 1;
+  }
+
+  &__background-oval {
+    position: absolute;
+    left: 90%;
+    top: 65%;
+    z-index: 1;
+  }
+
+
+  &__profile {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 174px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+
+    .header__highlight {
+      color: $color-green;
+      position: relative;
+      padding-bottom: 0.5rem;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        height: 4px;
+        background-color: $color-green;
+      }
+    }
+  }
+
+  &__description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: $color-gray;
+    margin-bottom: 2rem;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__separator {
+    width: 100%;
+    height: 3px;
+    background-color: $color-gray;
+    opacity: 0.2;
+    margin: 5rem 0 2rem;
+  }
+}
+// ----------------------------------------------do not modify above----------------------------------------------
+
+
+// ----------------------------------------------------------tablet styles 768px ----------------------------------------------------------
+@media screen and (min-width: 768px) {
+  .header {
+    &__content {
+      position: relative;
+      z-index: 3;
+      max-width: 50%;
+      text-align: left;
+      align-items: flex-start;
+      right: 25%;
+    }
+
+    &__top {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      z-index: 3;
+    }
+
+    &__name {
+      font-size: 1.5rem;
+      margin-bottom: 0;
+      position: relative;
+      z-index: 3;
+    }
+
+    &__social {
+      position: absolute;
+      right: -20rem;
+      z-index: 5;
+      margin-bottom: 0;
+    }
+
+    &__image-container {
+      position: absolute;
+      left: 25rem;
+      top: -3%;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      z-index: 1;
+      margin: 0;
+    }
+
+    &__background-oval-group {
+      z-index: 5;
+    }
+
+    &__background-oval {
+      z-index: 5;
+    }
+
+    &__profile {
+      max-width: 768px;
+      font-size: 1rem;
+      z-index: 2;
+    }
+
+    &__title {
+      font-size: 4rem;
+      line-height: 1.1;
+      margin-left: 0;
+      margin-right: 0;
+      text-align: left;
+      position: relative;
+      z-index: 3;
+
+      .header__highlight {
+        &::after {
+          left: 0;
+          transform: none;
+        }
+      }
+    }
+
+    &__description {
+      margin-left: 0;
+      margin-right: 0;
+      text-align: left;
+      position: relative;
+      z-index: 3;
+    }
+
+    &__button {
+      align-self: flex-start;
+      position: relative;
+      z-index: 3;
+    }
+  }
+}

@@ -1,0 +1,55 @@
+@use '../abstracts/variables' as *;
+
+.skills {
+  padding: -1.5rem 1.5rem;
+  position: relative;
+
+  &__grid {
+    display: grid;
+    gap: 1.5rem;
+    padding: 0 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  &__separator {
+    width: 90%;
+    height: 3px;
+    background-color: $color-gray;
+    opacity: 0.2;
+    margin: 5rem 0;
+    margin-left: 1.2rem;
+  }
+
+  &__background-oval-group {
+    position: absolute;
+    left: 50%;
+    top: 90%;
+    transform: rotate(180deg);
+    z-index: 1;
+  }
+}
+
+// Estilos de las tarjetas de habilidades
+.skill-card {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 0.5rem;
+  margin-top: -3rem;
+  
+  &__title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: $color-white;
+  }
+
+  &__experience {
+    font-size: 1rem;
+    font-weight: 500;
+    color: $color-gray;
+  }
+}

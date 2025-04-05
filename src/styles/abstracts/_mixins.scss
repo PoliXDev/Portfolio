@@ -1,4 +1,4 @@
-@use '/sass/abstracts/variables' as var;
+@use './variables' as var;
 
 @mixin breakpoint($bp) {
   @if $bp == tablet {

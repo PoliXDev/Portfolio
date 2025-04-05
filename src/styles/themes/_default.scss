@@ -1,7 +1,7 @@
-@use '../abstracts/variables';
+@use '../abstracts' as *;
 
 html * {
-    font-family: variables.$roboto-font;
+    font-family: 'Space Grotesk', sans-serif;
 }
  
 body {
