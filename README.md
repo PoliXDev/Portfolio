@@ -2,11 +2,11 @@
 
 # Adam Keyes - Portfolio
 
-![Adam Keyes Logo](./dist/img/readme/adamkeyes%20logo.png)
+![Adam Keyes Logo](./public/img/readme/adamkeyes%20logo.png)
 
 A modern, responsive portfolio for a frontend developer, with an elegant and professional design focused on showcasing projects and technical skills.
 
-![Adam Keyes Portfolio](./dist/img/readme/Adam%20Keyes%20-%20Frontend%20Developer.png)
+![Adam Keyes Portfolio](./public/img/readme/Adam%20Keyes%20-%20Frontend%20Developer.png)
 
 https://polixdev.github.io/Portfolio/
 
