@@ -2,6 +2,7 @@ import { defineConfig } from 'vite';
 
 export default defineConfig({
   // Configuración básica
+  base: './', // Cambiar a ruta relativa para GitHub Pages
   root: '.', // Define la raíz del proyecto (donde está tu index.html)
   publicDir: 'public', // Define el directorio público (donde irán los archivos estáticos como imágenes, fuentes, etc.)
   build: {
