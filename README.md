@@ -1,6 +1,6 @@
 # Portfolio - Frontend Developer
 
-# Adam Keyes - Portfolio
+
 
 ![Adam Keyes Logo](./public/img/readme/adamkeyes%20logo.png)
 
