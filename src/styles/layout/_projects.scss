@@ -1,5 +1,5 @@
 @use '../abstracts/variables' as *;
-
+//----------------------------------------------mobile styles----------------------------------------------
 .projects {
   padding: 2rem 1.5rem;
   position: relative;
@@ -51,5 +51,74 @@
   &__buttons {
     display: flex;
     gap: 1rem;
+  }
+} 
+//----------------------------------------------tablet view styles----------------------------------------------
+@media screen and (min-width: 768px) {
+  .projects {
+    &__grid {
+      grid-template-columns: repeat(2, 1fr);
+      margin-bottom: 5rem;
+    }
+  }
+}
+
+//----------------------------------------------desktop view styles----------------------------------------------
+@media screen and (min-width: 1440px) {
+  .projects {
+    &__grid {
+      grid-template-columns: repeat(3, 1fr);
+      margin-bottom: 5rem;
+    }
+    
+    &__card {
+      position: relative;
+      overflow: hidden;
+      
+      &:hover {
+        .projects__buttons {
+          opacity: 1;
+          transform: translateX(0);
+          pointer-events: auto;
+        }
+        
+        .projects__image {
+          filter: brightness(0.3);
+          transform: scale(1.05);
+        }
+        
+        .projects__name, 
+        .projects__tech {
+          transform: translateY(-20px);
+          opacity: 0;
+        }
+      }
+    }
+    
+    &__buttons {
+      position: absolute;
+      top: 20%;
+      left: 0;
+      right: 0;
+      transform: translateX(-100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1.2rem;
+      opacity: 0;
+      transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+      z-index: 2;
+      pointer-events: none;
+    }
+    
+    &__image {
+      transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    }
+    
+    &__name, 
+    &__tech {
+      transition: all 0.3s ease;
+    }
   }
 } 

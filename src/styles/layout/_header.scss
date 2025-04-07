@@ -1,6 +1,6 @@
 @use '../abstracts/variables' as *;
 
-  // ------------------- DO NOT MODIFY  -------------------
+//----------------------------------------------mobile styles----------------------------------------------
 .header {
   padding: 1rem 1.5rem;
   position: relative;
@@ -40,10 +40,18 @@
     justify-content: center;
 
     a {
-      transition: opacity 0.3s ease;
+      transition: all 0.3s ease;
 
       &:hover {
-        opacity: 0.8;
+        transform: translateY(-5px);
+        
+        img {
+          filter: brightness(1.2) sepia(100%) saturate(300%) hue-rotate(80deg);
+        }
+      }
+      
+      img {
+        transition: all 0.3s ease;
       }
     }
   }
@@ -72,6 +80,9 @@
     z-index: 1;
   }
 
+  &__background-oval2 {
+   display: none;
+  }
 
   &__profile {
     position: relative;
@@ -118,6 +129,10 @@
     margin-right: auto;
   }
 
+  &__contact-btn {
+    display: inline-block;
+  }
+
   &__separator {
     width: 100%;
     height: 3px;
@@ -126,7 +141,6 @@
     margin: 5rem 0 2rem;
   }
 }
-// ----------------------------------------------do not modify above----------------------------------------------
 
 
 // ----------------------------------------------------------tablet styles 768px ----------------------------------------------------------
@@ -147,10 +161,11 @@
       align-items: center;
       position: relative;
       z-index: 3;
+      margin-bottom: 40px;
     }
 
     &__name {
-      font-size: 1.5rem;
+      font-size: 32px;
       margin-bottom: 0;
       position: relative;
       z-index: 3;
@@ -161,6 +176,8 @@
       right: -20rem;
       z-index: 5;
       margin-bottom: 0;
+      
+    
     }
 
     &__image-container {
@@ -176,11 +193,24 @@
 
     &__background-oval-group {
       z-index: 5;
+      display: flex;
+      right: 185%;
+      top: 10%;
     }
 
     &__background-oval {
       z-index: 5;
+      display: flex;
+      left: 80%;
+      top: 69%;
     }
+
+   &__background-oval2 {
+   
+    display: none;
+
+   }
+
 
     &__profile {
       max-width: 768px;
@@ -189,13 +219,15 @@
     }
 
     &__title {
-      font-size: 4rem;
-      line-height: 1.1;
+      font-size: 72px;
+      line-height: -2px;
       margin-left: 0;
       margin-right: 0;
       text-align: left;
       position: relative;
       z-index: 3;
+      width: 444px;
+      margin-top: 24px;
 
       .header__highlight {
         &::after {
@@ -211,12 +243,183 @@
       text-align: left;
       position: relative;
       z-index: 3;
+      font-size: 18px;
+      margin-top: 24px;
+      width: 444px;
     }
 
     &__button {
-      align-self: flex-start;
       position: relative;
       z-index: 3;
+      left: -7%;
+      margin-top: 1rem;
+      align-self: flex-start;
     }
-  }
+
+    &__separator {
+      display:flex;
+      width: 202%;
+      height: 3px;
+      background-color: $color-gray;
+      opacity: 0.2;
+      margin: 5rem 0 2rem;
+    }
+  } 
 }
+
+.header__background-oval-group-desktop {
+  display: none;
+}
+
+
+
+// ----------------------------------------------------------desktop styles 1440px ----------------------------------------------------------
+@media screen and (min-width: 1440px) {
+  .header {
+    padding: 2rem 3rem;
+    overflow: visible;
+    
+    &__content {
+      position: relative;
+      z-index: 3;
+      max-width: 100%;
+      text-align: left;
+      right: 7%;
+      margin: 0 auto;
+      overflow: visible;
+    }
+  
+    &__top {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      z-index: 3;
+      margin-bottom: 50px;
+      right: 9%;
+    }
+
+    &__name {
+      font-size: 32px;
+      margin-bottom: 0;
+      position: relative;
+      z-index: 3;
+      left: 1.2%;
+    }
+
+    &__social {
+      position: absolute;
+      right: -25%;
+      z-index: 5;
+      margin-bottom: 0;
+      &:hover {
+        opacity: 0.8;
+        color: $color-green;
+      }
+      
+    
+    }
+
+    &__image-container {
+      position: absolute;
+      left: 28rem;
+      top: -5%;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      z-index: 1;
+      margin: 0;
+    }
+  
+
+    &__background-oval-group-desktop {
+      z-index: 5;
+      display: flex;
+      right: 140%;
+      top: -12%;
+      width: 500px;
+      height: 500px;
+      position: absolute;
+    }
+
+    &__background-oval-group {
+      display: none;
+    }
+
+    &__background-oval2 {
+      z-index: 5;
+      display: flex;
+      left: 22%;
+      top: 80%;
+      width: 129px;
+      height: 129px;
+      position: absolute;
+    }
+    &__background-oval {
+      display: none;
+    }
+    &__profile {
+      max-width: 768px;
+      font-size: 2rem;
+      z-index: 2;
+      transform: scale(1.3);
+    }
+
+    &__title {
+      font-size: 92px;
+      line-height: 1;
+      margin-left: 0;
+      margin-right: 0;
+      text-align: left;
+      position: relative;
+      z-index: 3;
+      width: auto;
+      max-width: 900px;
+      margin-top: 24px;
+      left: -8%;
+      & .header__highlight {
+        &::after {
+          left: 0;
+          transform: none;
+        }
+      }
+    }
+
+    &__description {
+      margin-left: 0;
+      margin-right: 0;
+      text-align: left;
+      position: relative;
+      z-index: 3;
+      font-size: 18px;
+      margin-top: 24px;
+      width: 444px;
+      left: -7%;
+    }
+
+    &__contact-btn {
+      display: inline-block;
+      position: relative;
+      z-index: 10;
+      left: -85px;
+      margin-top: 16px;
+    }
+
+
+
+    &__separator {
+      display:flex;
+      width: 131%;
+      height: 3px;
+      background-color: $color-gray;
+      opacity: 0.2;
+      margin: 5rem 0 2rem;
+      position: absolute;
+      left: -8%;
+      top: 125%;
+    }
+
+    }
+  } 
+
+

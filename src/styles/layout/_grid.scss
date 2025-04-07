@@ -12,3 +12,15 @@
     align-items: center;
   }
 }
+
+// ------------------- Tablet styles 768px -------------------
+@media screen and (min-width: 768px) {
+  .grid {
+    &--skills {
+      grid-template-columns: repeat(2, 1fr);
+      max-width: 1000px;
+      gap: 3rem 8rem;
+    }
+  }
+}
+// ----------------------------------------------------------

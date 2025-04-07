@@ -3,6 +3,7 @@
 .skills {
   padding: -1.5rem 1.5rem;
   position: relative;
+  background-color: $color-black;
 
   &__grid {
     display: grid;
@@ -23,14 +24,17 @@
 
   &__background-oval-group {
     position: absolute;
-    left: 50%;
+    left: 60%;
     top: 90%;
     transform: rotate(180deg);
     z-index: 1;
   }
+  &__background-oval-group-desktop {
+    display: none;
+  }
 }
 
-// Estilos de las tarjetas de habilidades
+
 .skill-card {
   padding: 1.5rem;
   display: flex;
@@ -40,6 +44,13 @@
   text-align: center;
   gap: 0.5rem;
   margin-top: -3rem;
+  
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
   
   &__title {
     font-size: 2rem;
@@ -53,3 +64,74 @@
     color: $color-gray;
   }
 }
+
+//----------------------------------------------tablet view styles----------------------------------------------
+@media screen and (min-width: 768px) {
+  .skills {
+    &__grid {
+      grid-template-columns: repeat(2, 1fr);
+      max-width: 1000px;
+      gap: 3rem 8rem;
+      margin-bottom: 6rem;
+    }
+
+    &__background-oval-group {
+      left: 79%;
+      top: 80%;
+      transform: rotate(180deg);
+      z-index: 1;  
+    }
+    &__separator {
+      display: none;
+      
+    }
+  }
+
+  .skill-card {
+    padding: 0;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+    margin-top: 0;
+    
+    &__content {
+      align-items: flex-start;
+      text-align: left;
+    }
+    
+    &__title {
+      font-size: 3rem;
+      margin: 0;
+      line-height: 1;
+    }
+    
+    &__experience {
+      font-size: 1rem;
+      margin: 0;
+    }
+  }
+}
+
+//----------------------------------------------desktop view styles----------------------------------------------
+@media screen and (min-width: 1440px) {
+  .skills {
+    &__grid {
+      grid-template-columns: repeat(3, 1fr);
+      max-width: 1250px;
+      gap: 4rem 10rem;
+    }
+    &__background-oval-group {
+      display: none;
+    }
+
+    &__background-oval-group-desktop {
+      display: flex;
+      position: absolute;
+      left: 90%;
+      top: 70%;
+      transform: rotate(180deg);
+      z-index: 1;  
+    }
+  }
+}
+
